@@ -1,1 +1,1 @@
-First assignment of korszam.
+Korszam assignments.

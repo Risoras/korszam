@@ -1,0 +1,2 @@
+1st assignment is to make a function that integrates.
+My first version works somewhat but it's pretty innaccurate (over 1% off). Uses a very simple method and it's brute force.
