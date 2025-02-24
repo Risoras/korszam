@@ -1,2 +1,2 @@
 1st assignment is to make a function that integrates.
-My first version works somewhat but it's pretty innaccurate (over 1% off). Uses a very simple method and it's brute force.
+First version had an oversight and it was wrong just happened to almost line up with wolfram alpha's output (it was a 10th of it tbh but I missed a zero).
