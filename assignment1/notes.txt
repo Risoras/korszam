@@ -1,3 +1,8 @@
-1st assignment is to make a function that integrates.
-First version had an oversight and it was wrong, just happened to almost line up with wolfram alpha's output (it was a 10th of it tbh but I missed a zero).
-Second version works just fine. Uses trapezoidal rule.
+The task was to write a program that numerically integrates cos(x)*exp(-x^2).
+
+I worte the cos(x)*exp(-x^2) function first (called "cosexp") then created the function to integrate it ("integral").
+
+"Integral" is fairly simple, takes two arguments, the upper on lower bounds of the definite integral. 
+It then takes the length of the interval "interval" and divides it by 10^6, which is then rounded to obtain N, number of steps the integration will take.
+"L" is then divided by N to obtain "dx", the length of each step.
+Then a simple for loop using the trapezoidal rule does the integration.

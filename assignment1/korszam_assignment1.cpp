@@ -24,15 +24,14 @@ long double cosexp(long double x){
 long double integral (long double ll, long double ul) {
 
     long double I=0;                            // result of integration
-    long double x = ll;
     long double interval = abs(ul - ll);      // interval on which the function is integrated
     int N = round(interval/(1e-6));                // number of steps integration will take
     long double dx = interval/N;           // size of integration steps
 
     for (int i = 0; i < N; i++) {          // for loop that does the integration
 
-        I += (cosexp(x)+cosexp(x+dx))/2*dx;
-        x += dx;
+        I += (cosexp(ll)+cosexp(ll+dx))/2*dx;
+        ll += dx;
 
     }
     return I;
