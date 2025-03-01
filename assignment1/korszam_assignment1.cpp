@@ -4,7 +4,7 @@ using namespace std;
 
 long double cosexp(long double x);  // function to be integrated
 
-long double integral(long double ll, long double ul, long double (*f)(long double a));  // function that will integrate
+long double integral(long double ll, long double ul, long double (*f)(long double a), long double p=1e-6);  // function that will integrate, if 'p' is very small run time will be pretty long
 
 int main(){
 
@@ -22,12 +22,12 @@ long double cosexp(long double x){
 }
 
 
-long double integral (long double ll, long double ul, long double (*f)(long double a)) {
+long double integral (long double ll, long double ul, long double (*f)(long double a), long double p) {
 
     long double I=0;
-    long double interval = abs(ul - ll);      // interval on which the function is integrated
-    int N = round(interval/(1e-6));                // number of steps integration will take
-    long double dx = interval/N;           // size of integration steps
+    long double L = abs(ul - ll);      // interval on which the function is integrated
+    int N = round(L/(p));                // number of steps integration will take
+    long double dx = L/N;           // size of integration steps
 
     for (int i = 0; i < N; i++) {          // for loop that does the integration
 
