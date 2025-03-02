@@ -1,10 +1,14 @@
-The task was to write a program that numerically integrates.
+The task was to write a program that numerically integrates a given mathematical function and then test it's accuracy at different number of integration steps.
 
 I first worte a function "cosexp" is the following function: cos(x)*exp(-x^2), then created the function "integral" that can numerically integrate any function passed to it.
 
 "Integral" is fairly simple, takes four arguments, the upper on lower bounds of the definite integral as "long double" numbers, 
-the function we want to integrate and a "p" variable that will determine how accurate the integration will be (it's value is 10^-6 by default).
+the function we want to integrate "f" and a "p" variable that will determine how accurate the integration will be (it's value is 10^-4 by default).
 It then takes the length of the interval, "L" and divides it by "p"", which is then rounded to obtain N, the number of steps the integration will take.
+I chose to do it this way because then the integration will take the same number of steps/unit length no matter the length of the interval, this does make it harder to do what the assignment calls for.
 "L" is then divided by N to obtain "dx", the length of each step.
-Then a simple for loop using the trapezoidal rule does the integration.
+Then a simple for loop using Simpson's 3/8 rule does the integration.
 Finally the function returns the result as a long double.
+
+I wrote third function "test" which takes a structure with the values for "integral" and tests it between n = 10 and 10^6 steps.
+I found that the result converges to the correct value as n increases until n = 10^4, above this the integration starts to diverge which is expected behaviour for the method used.
