@@ -1,7 +1,7 @@
 #include <cmath>
 #include <iostream>
 
-// 2D vector class with all the necessary operations
+// 2D vector class with all the necessary operators
 
 template<typename T>
 struct Vector2d 

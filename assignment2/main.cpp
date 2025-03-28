@@ -22,8 +22,8 @@ int main()            // tests vector.hpp to see if it works correctly
     Vector2d<double> add_check{-2.2, 4.8}, sub_check{7.2, 2.4}, div_check{1.25, 1.8}, mult_check{3.5, 5.04};    // correct values for vector operations I calculated by hand
     double dot_check = -7.43, length_check = 4.3829214, sqlength_check = 19.21;
 
-    double error = 1e-7;
-    int problems = 0;
+    double error = 1e-7;   // maximum difference between pre-calculated values and vector.hpp operators/functions
+    int problems = 0;      // to count how many operators/functions don't work
 
     Vector2d v_add = v1 + v2, v_sub = v1 - v2, v_multL = a * v1, v_multR = v1 * a, v_div = v1/b;   // vector operators which will be checked for accuracy/function
     Vector2d v11 = v1, v12 = v1, v13 = v1, v14 = v1;      // I have to copy v1 for the assignment operators
