@@ -84,20 +84,20 @@ template<typename T>
 
 
  template<typename T>
- double dot(Vector2d<T> const& a, Vector2d<T> const& b) 
+ double dot(Vector2d<T> const& a, Vector2d<T> const& b)        // calculates the dot product of two vectors
  {
     return (a.x * b.x + a.y * b.y);
  }
 
 
 template<typename T>
- double length(Vector2d<T> const& v)
+ double length(Vector2d<T> const& v)                         // calculates the length of a vector
  {
     return (std::sqrt(std::pow(v.x, 2) + std::pow(v.y, 2)));
  }
 
  template<typename T>
- double sqlength(Vector2d<T> const& v)
+ double sqlength(Vector2d<T> const& v)                       // calculates the square of a vector's length
  {
     return (std::pow(v.x, 2) + std::pow(v.y, 2));
  }
