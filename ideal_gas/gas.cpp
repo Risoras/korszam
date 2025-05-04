@@ -9,8 +9,8 @@
 
 int const N = 1000;             //number of gas particles
 
-double const a = 15;          //cube's edge length
-double const Vmax = 30;       //maximum initial velocity
+double const a = 30;          //cube's edge length
+double const Vmax = 4000000000000;       //maximum initial velocity
 double const epsilon = 10.22;
 
 
@@ -33,9 +33,9 @@ void initial_conditions (gas& G) {
 
         for (int j = 0; j < 100; j++){
 
-            G.position[p][0] = i+0.5 ;
-            G.position[p][1] = i+0.5 ;
-            G.position[p][2] = i+0.5 ;
+            G.position[p][0] = (i+0.5)*a/10 ;
+            G.position[p][1] = (i+0.5)*a/10 ;
+            G.position[p][2] = (i+0.5)*a/10 ;
             p++;
         }
 
@@ -166,7 +166,7 @@ int main() {
 
     time_t begin = std::time(NULL);
 
-    double dt = 0.0000001;
+    double dt = 0.000000000000001;
     std::srand(time(NULL));
 
     gas G;
